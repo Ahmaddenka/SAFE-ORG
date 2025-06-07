@@ -1,0 +1,12 @@
+IPython
+google
+io
+matplotlib
+mpl_toolkits
+networkx
+numpy
+pandas
+pyDOE
+scipy
+seaborn
+unicodedata
