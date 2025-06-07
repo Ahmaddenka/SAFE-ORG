@@ -1,0 +1,25 @@
+Academic and Non-Commercial Research License
+
+Copyright (c) 2025 Ahmad Dehghan Nejad
+
+This software is provided for **academic and non-commercial research purposes only**.
+Use of this code is restricted to educational institutions, research organizations, and individual researchers conducting non-commercial studies.
+
+Any use of this code for commercial purposes, including but not limited to the development of commercial products, services, or tools, is strictly prohibited without prior written permission from the author.
+
+You may:
+- Use and modify the code for academic research purposes.
+- Share modified versions with proper attribution and within academic contexts.
+- Cite the corresponding paper when using the code.
+
+**Citation:** If you use this code, please cite the corresponding paper (under review in *Safety Science*, 2025) or contact the author for citation details.
+
+You may not:
+- Use the code or its derivatives for commercial gain.
+- Redistribute this software as part of a commercial product.
+- Claim ownership or patent over the underlying algorithm or its extensions.
+
+**Note:** A patent application is currently in progress for the core methodology underlying this software.
+
+For permissions beyond the scope of this license, contact:
+dehghan.nejad@aut.ac.ir
