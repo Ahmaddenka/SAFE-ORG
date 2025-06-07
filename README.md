@@ -1,125 +1,119 @@
+# SAFE-ORG: Fuzzy Simulation Framework for Organizational Safety Behavior
 
-# SAFE-ORG: Simulation Architecture for Organizational Safety using FCMs
+This repository contains the Jupyter Notebook implementation of a simulation framework designed to analyze and optimize organizational safety behavior using a fuzzy cognitive mapping approach.
 
-This repository accompanies the research article titled:
-
-**"FCM-Based Agent Architecture for Organizational Safety Simulation– Part B: Model Implementation and Behavioral Validation"**
-
----
-
-## 🔍 Project Summary
-
-This repository contains the full implementation of a simulation-ready architecture for modeling organizational safety behavior using **Fuzzy Cognitive Maps (FCMs)** within a **Multi-Agent System (MAS)**. The model captures how internal organizational structures—termed **Behavior-Shaping Mechanisms (BSMs)**—influence safety-related behaviors at individual, group, and system levels.
-
-The model is grounded in theoretical frameworks from organizational safety science and was validated through application to a real-world **aviation safety department**. Simulation results explore stability, sensitivity, and boundary behavior under uncertainty, offering a platform for safety analysis and system redesign.
-
----
-
-## 🧠 Core Features
-
-- **Multi-layered architecture:** Includes agent-level, group-level, organizational environment, and BSM layers
-- **FCM-based reasoning:** Internal decision logic is driven by fuzzy causal networks
-- **Simulation under uncertainty:** Incorporates random nodes and expert-informed fuzzy inputs
-- **Behavioral validation:** Face validation against expert judgment and theoretical expectations
-- **Sensitivity and robustness testing:** Includes structured analysis of BSM and random node influence
-
----
-
-## 📁 Repository Structure
-
-| File / Folder | Description |
-|---------------|-------------|
-| `developing_graph.py` | Builds the hierarchical FCM graph structure based on Excel inputs |
-| `initial_test.py` | Simple test of model dynamics and simulation pipeline |
-| `main_simulation.py` | Full simulation experiment for organizational behavior |
-| `sensitivity_input_nodes.py` | Sensitivity analysis on input-level (BSM) nodes |
-| `sensitivity_intermediate_nodes.py` | Sensitivity analysis on intermediate (group/SOE) nodes |
-| `sensitivity_random_nodes.py` | Sensitivity analysis on random input variables |
-| `boundary_behavior_analysis.py` | Verifies system behavior under extreme input scenarios |
-| `face_validation.py` | Expert-based face validation of model outputs |
-| `.xlsx` files | Input graphs and adjacency matrices for FCM construction |
-| `.csv` files | Sample outputs from simulation runs (e.g., sensitivity results) |
-| `LICENSE` | Academic use license – see below for terms |
+All computational modules, validation steps, and sensitivity analyses are presented in executable `.ipynb` files.
 
 ---
 
 ## 🚀 How to Run
 
-### 1. Install Required Libraries
+### 1. Run on Google Colab (Recommended for Reviewers)
 
-You may install dependencies using:
+If you want to explore the notebooks **without installing anything**, follow these steps:
+
+1. Open [Google Colab](https://colab.research.google.com).
+2. Go to the **GitHub** tab.
+3. Paste the repository URL:
+   ```
+   https://github.com/Ahmaddenka/SAFE-ORG
+   ```
+4. Choose the notebook you want to explore (e.g., `developing_graph.ipynb` or `main_simulation.ipynb`).
+5. At the beginning of each notebook, **run the cell to install required packages**:
+
+```python
+!pip install -r https://raw.githubusercontent.com/Ahmaddenka/SAFE-ORG/main/requirements.txt
+```
+
+> **Note:** Installing dependencies may take 1–2 minutes.
+
+---
+
+### 2. Run Locally (Advanced Users)
+
+#### Prerequisites
+- Python ≥ 3.8  
+- Jupyter Notebook / JupyterLab  
+- All dependencies listed in `requirements.txt`
+
+#### Installation
 
 ```bash
+git clone https://github.com/Ahmaddenka/SAFE-ORG.git
+cd SAFE-ORG
 pip install -r requirements.txt
+jupyter notebook
 ```
 
-Typical dependencies include:
-- `numpy`
-- `pandas`
-- `networkx`
-- `matplotlib`
-- `openpyxl`
+---
 
-> *You can adapt the `requirements.txt` based on your specific environment.*
+## 📁 File Structure
 
-### 2. Execute Simulation Steps
+- **`*.ipynb` files**: Main simulation components (graph generation, sensitivity analysis, boundary behavior, etc.)
+- **`.xlsx` files**: Input adjacency matrices and configurations
+- **`.graphml` files**: Pre-generated graph representations (optional use)
+- **`.csv` files**: Simulation outputs saved during runtime
 
-```bash
-python developing_graph.py             # Build the simulation graph
-python initial_test.py                # Run a basic test
-python main_simulation.py            # Full simulation execution
-python face_validation.py            # Compare model to expert assessment
+> All file paths are **relative** and designed to work from the repository's root.
+
+---
+
+## 📌 Key Notebooks
+
+| Notebook                          | Purpose                                     |
+|----------------------------------|---------------------------------------------|
+| `developing_graph.ipynb`         | Build the simulation network graph          |
+| `main_simulation.ipynb`          | Perform full-scale safety behavior simulation |
+| `sensitivity_input_nodes.ipynb`  | Sensitivity analysis on input (root) nodes  |
+| `sensitivity_intermediate_nodes.ipynb` | Sensitivity on intermediate nodes     |
+| `sensitivity_random_nodes.ipynb` | Sensitivity on random-effect nodes          |
+| `boundary_behavior_analysis.ipynb` | Boundary condition exploration            |
+| `face_validation.ipynb`          | Expert validation of model behavior         |
+| `initial_test.ipynb`             | Initial run to verify model initialization  |
+
+---
+
+## 📂 Input Files
+
+All required Excel input files are stored in the main directory:
+- `SOE_graph.xlsx`, `group_graph.xlsx`, etc. contain the structure of each subgraph.
+- `all_network.graphml` is an optional full network file (used in some notebooks).
+
+> These files are automatically loaded by each notebook. **No manual file movement is needed.**
+
+---
+
+## 🔄 Output Files
+
+Some notebooks save `.csv` results (e.g., behavior state vectors, sensitivity metrics) into the root directory.  
+These outputs can be directly downloaded from Colab or analyzed locally.
+
+---
+
+## 🧪 Reproducibility Notes
+
+- The simulation involves fuzzy and stochastic components.
+- For exact reproducibility, fixed random seeds can be added to each notebook if needed.
+
+---
+
+## 📄 License
+
+This code and repository are released under the **Academic Research License**:
+
+- Redistribution and use for **non-commercial, academic purposes** are permitted.
+- Citation of the original paper (when published) is **required**.
+
+Author: **Ahmad Dehghan Nejad**  
+Contact: [dehghan.nejad@aut.ac.ir](mailto:dehghan.nejad@aut.ac.ir)
+
+---
+
+## 📘 Citation
+
+The article describing this simulation framework is currently under review for publication in *Safety Science*.  
+Please cite the GitHub repository until the DOI of the paper is available:
+
+```text
+Ahmad Dehghan Nejad. SAFE-ORG: Simulation Framework for Fuzzy Analysis of Organizational Safety Behavior. GitHub Repository: https://github.com/Ahmaddenka/SAFE-ORG
 ```
-
-Run sensitivity or validation components as needed:
-
-```bash
-python sensitivity_input_nodes.py
-python sensitivity_intermediate_nodes.py
-python sensitivity_random_nodes.py
-python boundary_behavior_analysis.py
-```
-
-### 3. View Results
-
-Some scripts produce `.csv` outputs (e.g., sensitivity results), which can be analyzed using any data analysis tool.
-
----
-
-## 🔒 License
-
-This project is released under an **Academic and Non-Commercial Research License**:
-
-> Use is restricted to academic and research purposes.  
-> Commercial use or redistribution is prohibited without written permission.  
-> A patent application is in process. For questions, contact:  
-> **Ahmad Dehghan Nejad** – `dehghan.nejad@aut.ac.ir`
-
-See the full terms in the [LICENSE](./LICENSE) file.
-
----
-
-## 📄 Citation
-
-This work is based on the following article (currently under review):
-
-**Ahmad Dehghan Nejad (2025).**  
-*FCM-Based Agent Architecture for Organizational Safety Simulation– Part B: Model Implementation and Behavioral Validation.*  
-_Submitted to: Safety Science_
-
----
-
-## 📌 Notes
-
-- The repository is part of a broader research program on computational safety modeling.  
-- For background architecture and theoretical foundations, refer to **Part A** .
-- Appendix sections referenced in the paper are aligned with internal components in this repository.
-
----
-
-## 📬 Contact
-
-For collaboration, academic inquiry, or licensing questions, please contact:
-
-**Ahmad Dehghan Nejad**  
-dehghan.nejad@aut.ac.ir
