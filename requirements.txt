@@ -1,0 +1,9 @@
+IPython
+google
+matplotlib
+networkx
+numpy
+pandas
+pyDOE
+scipy
+seaborn
