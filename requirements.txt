@@ -1,5 +1,12 @@
+IPython
+google
+io
+matplotlib
+mpl_toolkits
+networkx
 numpy
 pandas
-networkx
-matplotlib
-openpyxl
+pyDOE
+scipy
+seaborn
+unicodedata
