@@ -19,13 +19,6 @@ If you want to explore the notebooks **without installing anything**, follow the
    https://github.com/Ahmaddenka/SAFE-ORG
    ```
 4. Choose the notebook you want to explore (e.g., `developing_graph.ipynb` or `main_simulation.ipynb`).
-5. At the beginning of each notebook, **run the cell to install required packages**:
-
-```python
-!pip install -r https://raw.githubusercontent.com/Ahmaddenka/SAFE-ORG/main/requirements.txt
-```
-
-> **Note:** Installing dependencies may take 1–2 minutes.
 
 ---
 
